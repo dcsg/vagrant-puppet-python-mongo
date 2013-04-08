@@ -1,4 +1,4 @@
-## Vagrant and Puppet configuration with Python and Virtual Box
+## Vagrant and Puppet configuration for Python & MongoDB
 
 This is a sample Vagrant configuration with puppet provisioning to create a Virtual Box machine with Ubuntu Server 12
 .10 to use Python and MongoDB.
@@ -7,11 +7,13 @@ It provides a sample example how to use it and is explained on `Usage` section.
 
 #### Installation
 
-1. Install Vagrant 1.10
-2. Install Virtual Box
+1. Install [Vagrant 1.1.0](http://downloads.vagrantup.com/tags/v1.1.0)
+2. Install [Virtual Box 4.2.10](https://www.virtualbox.org/wiki/Downloads)
 3. Clone the repository `git clone https://github.com/danielcsgomes/vagrant-puppet-python-mongo.git`
 4. Run `vagrant up` on terminal or command line
-5. Output must be success.s
+5. The step 4 should not output any error
+
+**Note:** Vagrant will forward default MongoDB port on the created box to 50004, so if you want to connect from your local machine you can do it: `mongo localhost:500004 -u vagrant`
 
 #### Puppet Manifest will install:
 
